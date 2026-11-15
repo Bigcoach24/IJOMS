@@ -144,14 +144,14 @@ export default function SkincareDemo() {
   return (
     <div className="flex flex-col overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-xl shadow-stone-900/5">
       {/* Chat Header */}
-      <div className="flex items-center justify-between bg-emerald-900 px-5 py-4 text-white">
+      <div className="flex items-center justify-between bg-orange-900 px-5 py-4 text-white">
         <div className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-700 text-sm font-bold">
+          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-700 text-sm font-bold">
             AB
           </div>
           <div>
             <p className="text-sm font-bold">Aurora Botanicals • AI Sales Demo</p>
-            <p className="text-xs text-emerald-200">
+            <p className="text-xs text-orange-200">
               Simulated Beauty DM Assistant • Online 24/7
             </p>
           </div>
@@ -159,14 +159,14 @@ export default function SkincareDemo() {
         <button
           type="button"
           onClick={() => setMessages(INITIAL_MESSAGES)}
-          className="rounded-full border border-emerald-700 bg-emerald-800/80 px-3 py-1 text-xs font-medium text-emerald-100 transition hover:bg-emerald-700"
+          className="rounded-full border border-orange-700 bg-orange-800/80 px-3 py-1 text-xs font-medium text-orange-100 transition hover:bg-orange-700"
         >
           Reset
         </button>
       </div>
 
       {/* Chat Messages */}
-      <div className="flex max-h-[380px] min-h-[300px] flex-col gap-3 overflow-y-auto bg-[#F4F1EA] p-4 sm:p-5">
+      <div className="flex max-h-[380px] min-h-[160px] flex-col gap-3 overflow-y-auto bg-[#FBEEDD] p-4 sm:p-5">
         {messages.map((msg) => {
           if (msg.sender === "system") {
             return (
@@ -186,14 +186,14 @@ export default function SkincareDemo() {
               className={`flex flex-col ${isCustomer ? "items-end" : "items-start"}`}
             >
               {msg.tag && (
-                <span className="mb-1 text-[10px] font-semibold uppercase tracking-wider text-emerald-800">
+                <span className="mb-1 text-[10px] font-semibold uppercase tracking-wider text-orange-800">
                   {msg.tag}
                 </span>
               )}
               <div
                 className={`max-w-[85%] whitespace-pre-line rounded-2xl px-4 py-3 text-sm leading-relaxed shadow-sm ${
                   isCustomer
-                    ? "rounded-br-sm bg-emerald-700 text-white"
+                    ? "rounded-br-sm bg-orange-700 text-white"
                     : "rounded-bl-sm border border-stone-200 bg-white text-stone-800"
                 }`}
               >
@@ -215,7 +215,7 @@ export default function SkincareDemo() {
               key={prompt}
               type="button"
               onClick={() => sendPrompt(prompt)}
-              className="rounded-full border border-stone-300 bg-white px-3 py-1.5 text-xs font-medium text-stone-700 transition hover:border-emerald-600 hover:bg-emerald-50 hover:text-emerald-900"
+              className="rounded-full border border-stone-300 bg-white px-3 py-1.5 text-xs font-medium text-stone-700 transition hover:border-orange-600 hover:bg-orange-50 hover:text-orange-900"
             >
               {prompt}
             </button>
@@ -233,11 +233,11 @@ export default function SkincareDemo() {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder="Or type your own skincare question..."
-          className="flex-1 rounded-full border border-stone-300 bg-stone-50 px-4 py-2.5 text-sm text-stone-900 placeholder:text-stone-400 focus:border-emerald-600 focus:bg-white focus:outline-none"
+          className="flex-1 rounded-full border border-stone-300 bg-stone-50 px-4 py-2.5 text-sm text-stone-900 placeholder:text-stone-400 focus:border-orange-600 focus:bg-white focus:outline-none"
         />
         <button
           type="submit"
-          className="rounded-full bg-emerald-700 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-emerald-800"
+          className="rounded-full bg-orange-700 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-orange-800"
         >
           Send
         </button>

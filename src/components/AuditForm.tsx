@@ -86,8 +86,8 @@ export default function AuditForm() {
 
   if (status === "success") {
     return (
-      <div className="rounded-3xl border border-emerald-200 bg-emerald-50/70 p-8 text-center shadow-sm">
-        <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-emerald-600 text-white">
+      <div className="rounded-3xl border border-orange-200 bg-orange-50/70 p-8 text-center shadow-sm">
+        <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-orange-600 text-white">
           <svg
             className="h-6 w-6"
             fill="none"
@@ -140,7 +140,7 @@ export default function AuditForm() {
             placeholder="e.g. Amaka Okafor"
             value={form.name}
             onChange={(e) => setForm({ ...form, name: e.target.value })}
-            className="mt-1.5 w-full rounded-xl border border-stone-300 bg-stone-50/50 px-4 py-3 text-sm text-stone-900 placeholder:text-stone-400 focus:border-emerald-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-600/20"
+            className="mt-1.5 w-full rounded-xl border border-stone-300 bg-stone-50/50 px-4 py-3 text-sm text-stone-900 placeholder:text-stone-400 focus:border-orange-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-orange-600/20"
           />
         </div>
 
@@ -156,7 +156,7 @@ export default function AuditForm() {
             placeholder="e.g. GlowLab Skincare"
             value={form.businessName}
             onChange={(e) => setForm({ ...form, businessName: e.target.value })}
-            className="mt-1.5 w-full rounded-xl border border-stone-300 bg-stone-50/50 px-4 py-3 text-sm text-stone-900 placeholder:text-stone-400 focus:border-emerald-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-600/20"
+            className="mt-1.5 w-full rounded-xl border border-stone-300 bg-stone-50/50 px-4 py-3 text-sm text-stone-900 placeholder:text-stone-400 focus:border-orange-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-orange-600/20"
           />
         </div>
       </div>
@@ -174,7 +174,7 @@ export default function AuditForm() {
             placeholder="e.g. 0803 123 4567"
             value={form.whatsapp}
             onChange={(e) => setForm({ ...form, whatsapp: e.target.value })}
-            className="mt-1.5 w-full rounded-xl border border-stone-300 bg-stone-50/50 px-4 py-3 text-sm text-stone-900 placeholder:text-stone-400 focus:border-emerald-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-600/20"
+            className="mt-1.5 w-full rounded-xl border border-stone-300 bg-stone-50/50 px-4 py-3 text-sm text-stone-900 placeholder:text-stone-400 focus:border-orange-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-orange-600/20"
           />
         </div>
 
@@ -190,7 +190,7 @@ export default function AuditForm() {
             placeholder="e.g. @glowlab.ng or instagram.com/..."
             value={form.instagram}
             onChange={(e) => setForm({ ...form, instagram: e.target.value })}
-            className="mt-1.5 w-full rounded-xl border border-stone-300 bg-stone-50/50 px-4 py-3 text-sm text-stone-900 placeholder:text-stone-400 focus:border-emerald-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-600/20"
+            className="mt-1.5 w-full rounded-xl border border-stone-300 bg-stone-50/50 px-4 py-3 text-sm text-stone-900 placeholder:text-stone-400 focus:border-orange-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-orange-600/20"
           />
         </div>
       </div>
@@ -208,7 +208,7 @@ export default function AuditForm() {
             placeholder="e.g. Skincare serums, organic soaps, wigs"
             value={form.products}
             onChange={(e) => setForm({ ...form, products: e.target.value })}
-            className="mt-1.5 w-full rounded-xl border border-stone-300 bg-stone-50/50 px-4 py-3 text-sm text-stone-900 placeholder:text-stone-400 focus:border-emerald-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-600/20"
+            className="mt-1.5 w-full rounded-xl border border-stone-300 bg-stone-50/50 px-4 py-3 text-sm text-stone-900 placeholder:text-stone-400 focus:border-orange-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-orange-600/20"
           />
         </div>
 
@@ -221,7 +221,7 @@ export default function AuditForm() {
             name="volume"
             value={form.volume}
             onChange={(e) => setForm({ ...form, volume: e.target.value })}
-            className="mt-1.5 w-full rounded-xl border border-stone-300 bg-stone-50/50 px-4 py-3 text-sm text-stone-900 focus:border-emerald-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-600/20"
+            className="mt-1.5 w-full rounded-xl border border-stone-300 bg-stone-50/50 px-4 py-3 text-sm text-stone-900 focus:border-orange-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-orange-600/20"
           >
             {VOLUME_OPTIONS.map((option) => (
               <option key={option} value={option}>
@@ -242,7 +242,7 @@ export default function AuditForm() {
           required
           value={form.bottleneck}
           onChange={(e) => setForm({ ...form, bottleneck: e.target.value })}
-          className="mt-1.5 w-full rounded-xl border border-stone-300 bg-stone-50/50 px-4 py-3 text-sm text-stone-900 focus:border-emerald-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-600/20"
+          className="mt-1.5 w-full rounded-xl border border-stone-300 bg-stone-50/50 px-4 py-3 text-sm text-stone-900 focus:border-orange-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-orange-600/20"
         >
           <option value="" disabled>
             Select your biggest challenge...
@@ -264,7 +264,7 @@ export default function AuditForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="w-full rounded-full bg-emerald-700 px-6 py-4 text-base font-semibold text-white shadow-lg shadow-emerald-700/20 transition hover:bg-emerald-800 disabled:cursor-not-allowed disabled:opacity-60"
+        className="w-full rounded-full bg-orange-700 px-6 py-4 text-base font-semibold text-white shadow-lg shadow-orange-700/20 transition hover:bg-orange-800 disabled:cursor-not-allowed disabled:opacity-60"
       >
         {status === "submitting"
           ? "Sending Audit Request..."
