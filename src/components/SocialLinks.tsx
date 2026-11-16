@@ -8,7 +8,7 @@ import type { ReactNode } from "react";
 const SOCIALS: { name: string; href: string; icon: ReactNode }[] = [
   {
     name: "Instagram",
-    href: "",
+    href: "https://www.instagram.com/ijom.s",
     icon: (
       <>
         <rect x="2" y="2" width="20" height="20" rx="5" />
@@ -19,7 +19,7 @@ const SOCIALS: { name: string; href: string; icon: ReactNode }[] = [
   },
   {
     name: "TikTok",
-    href: "",
+    href: "https://www.tiktok.com/@ijomsystems",
     icon: (
       <path
         fill="currentColor"
