@@ -1,6 +1,7 @@
 import Image from "next/image";
 import AuditForm from "@/components/AuditForm";
 import SkincareDemo from "@/components/SkincareDemo";
+import SocialLinks from "@/components/SocialLinks";
 
 const PAIN_POINTS = [
   {
@@ -578,6 +579,7 @@ export default function Home() {
             </p>
             <p className="mt-1">© 2026 IJOMS Systems. All rights reserved.</p>
           </div>
+          <SocialLinks />
           <div className="flex flex-wrap items-center justify-center gap-6">
             <a href="#problem" className="hover:text-white">
               Problem
