@@ -2,8 +2,8 @@ import type { ReactNode } from "react";
 
 /**
  * IJOMS Systems social profiles.
- * Paste each profile URL below. Icons with an empty URL are hidden,
- * so no dead links ever reach the live site.
+ * Paste each profile URL below. Icons with an empty URL still show but are not clickable,
+ * so no dead links reach the live site.
  */
 const SOCIALS: { name: string; href: string; icon: ReactNode }[] = [
   {
@@ -64,35 +64,46 @@ const SOCIALS: { name: string; href: string; icon: ReactNode }[] = [
 ];
 
 export default function SocialLinks({ className = "" }: { className?: string }) {
-  const links = SOCIALS.filter((s) => s.href);
-  if (links.length === 0) return null;
+  const cls =
+    "flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-orange-600";
 
   return (
     <ul className={`flex items-center gap-3 ${className}`}>
-      {links.map((s) => (
-        <li key={s.name}>
-          <a
-            href={s.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`IJOMS Systems on ${s.name}`}
-            className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-orange-600"
+      {SOCIALS.map((s) => {
+        const svg = (
+          <svg
+            viewBox="0 0 24 24"
+            className="h-4 w-4"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
           >
-            <svg
-              viewBox="0 0 24 24"
-              className="h-4 w-4"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-            >
-              {s.icon}
-            </svg>
-          </a>
-        </li>
-      ))}
+            {s.icon}
+          </svg>
+        );
+        return (
+          <li key={s.name}>
+            {s.href ? (
+              <a
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`IJOMS Systems on ${s.name}`}
+                className={cls}
+              >
+                {svg}
+              </a>
+            ) : (
+              <span title={`${s.name} — link coming soon`} className={cls}>
+                {svg}
+              </span>
+            )}
+          </li>
+        );
+      })}
     </ul>
   );
 }
